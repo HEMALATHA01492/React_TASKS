@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "name": "plant1",
+      "price": 10.99,
+      "imgUrl": "/images/img3.jpg"
+    },
+    {
+      "id": 2,
+      "name": "plant2",
+      "price": 1199,
+      "imgUrl":  "/images/img4.jpg"
+    },
+    {
+      "id": 3,
+      "name": "plant3",
+      "price": 1.05,
+      "imgUrl": "/images/img5.jpg"
+    },
+    {
+      "id": 4,
+      "name": "plant4",
+      "price": 14000,
+      "imgUrl":  "/images/img6.jpg"
+    },
+    {
+        "id": 5,
+        "name": "plant5",
+        "price": 14000,
+        "imgUrl": "/images/img7.jpg"
+    },
+    {
+        "id": 6,
+        "name": "plant6",
+        "price": 14000,
+        "imgUrl":  "/images/img8.jpg"
+    },
+    {
+        "id": 7,
+        "name": "plant7",
+        "price": 14000,
+        "imgUrl": "/images/img9.jpg"
+    },
+        {
+            "id": 8,
+            "name": "plant8",
+            "price": 14000,
+            "imgUrl": "/images/img10.jpg"
+          }
+      
+    ]
