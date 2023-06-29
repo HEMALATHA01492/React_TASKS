@@ -8,7 +8,7 @@ function Card1() {
         <div className="card mb-5 mb-lg-0">
           <div className="card-body">
             <h5 className="card-title text-muted text-uppercase text-center">Free</h5>
-            <h6 className="card-price text-center">$0<span class="period">/month</span></h6>
+            <h6 className="card-price text-center">$0<span className="period">/month</span></h6>
             <hr></hr>
             <ul className="fa-ul">
               <li><span className="fa-li"><i className="fas fa-check"></i></span>Single User</li>
