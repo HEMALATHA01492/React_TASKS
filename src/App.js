@@ -1,27 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import './App.css'
-function App() {
-  // const [hover,setHover]=useState('null')
-  const style={
-    color:'blue'
-  }
-  
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+
+import './App.css';
+import './App1.css';
+import Home from './component/Home';
+function App(props) {
+  const {data}=props
+  console.log(data)
   return (
     <div>
-      <span>
-      <i class="fa-solid fa-star checked" ></i>
-      <i class="fa-solid fa-star checked"></i>
-      <i class="fa-solid fa-star checked"></i>
-      <i class="fa-solid fa-star checked"></i>
-      <i class="fa-solid fa-star checked"></i>
-      </span>
+   <Home data={data} />
      
     </div>
   )
 }
 
-export default App
+export default App;
 
 
 
