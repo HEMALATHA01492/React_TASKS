@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 export default function Card(props) {
     const {data}=props
     console.log(data)
   return (
     <>
-    {/* <!-- Earnings (Monthly) Card Example --> */}
+    {/* <!-- Earnings (Monthly) Card0 Example --> */}
                         <div className="col-xl-3 col-md-6 mb-4">
                             <div className="card border-left-primary shadow h-100 py-2">
                                 <div className="card-body">
@@ -25,7 +25,7 @@ export default function Card(props) {
                             </div>
                         </div>
 
-                        {/* <!-- Earnings (Monthly) Card Example --> */}
+                        {/* <!-- Earnings (Monthly) Card1 Example --> */}
                         <div className="col-xl-3 col-md-6 mb-4">
                             <div className="card border-left-success shadow h-100 py-2">
                                 <div className="card-body">
@@ -43,7 +43,7 @@ export default function Card(props) {
                             </div>
                         </div>
 
-                        {/* <!-- Earnings (Monthly) Card Example --> */}
+                        {/* <!-- Earnings (Monthly) Card2 Example --> */}
                         <div className="col-xl-3 col-md-6 mb-4">
                             <div className="card border-left-info shadow h-100 py-2">
                                 <div className="card-body">
@@ -72,7 +72,7 @@ export default function Card(props) {
                             </div>
                         </div>
 
-                        {/* <!-- Pending Requests Card Example --> */}
+                        {/* <!-- Pending Requests Card3 Example --> */}
                         <div className="col-xl-3 col-md-6 mb-4">
                             <div className="card border-left-warning shadow h-100 py-2">
                                 <div className="card-body">

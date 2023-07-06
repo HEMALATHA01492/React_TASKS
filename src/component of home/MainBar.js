@@ -1,10 +1,9 @@
 import React from 'react';
 import Content from './Content';
 import Card from './Card';
-import Chart from './Chart';
 import RemainingItems from './RemainingItems';
 
-function TopBar(props) {
+function MainBar(props) {
     const {data}=props
   return (
     // <!-- Content Wrapper -->
@@ -216,17 +215,19 @@ function TopBar(props) {
 
                 </nav>
                 {/* <!-- End of Topbar --> */}
+
+
+
                 <Content />
                 <div class="row ml-3 mr-4">
                 <Card data={data}/>
-                <Chart />
                 <RemainingItems />
 
 
-                </div>
-    </div>
+            </div>
+        </div>
     </div>
   )
 }
 
-export default TopBar;
+export default MainBar;

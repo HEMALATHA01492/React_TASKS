@@ -1,16 +1,16 @@
 import React from 'react';
 import SideBar from '../component of home/SideBar';
-import TopBar from '../component of home/TopBar';
+import MainBar from '../component of home/MainBar';
 
 
 
 function Home(props) {
-    const {data}=props
+    const {data}=props;
 
   return (
     <div id="wrapper">
     <SideBar />
-    <TopBar data={data}/>
+    <MainBar data={data}/>
      
     </div>
   )
