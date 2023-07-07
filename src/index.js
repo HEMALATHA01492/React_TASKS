@@ -6,23 +6,31 @@ import App from './App';
 const data=[
    {
         id:1,
-        content:'Earnings (Monthly)',
-        price:40000,
+        name:'Sree Lakshan',
+        age:28,
+        location:'Chennai',
+        contact:'9875863780'
     }, 
     {
         id:2,
-        content:'Earnings (Annual)',
-        price:215000,
+        name:'Nivin',
+        age:22,
+        location:'Chennai',
+        contact:'9879863780'
     }, 
     {
         id:3,
-        content:'Tasks',
-        price:50,
+        name:'Malathi',
+        age:20,
+        location:'Madurai',
+        contact:'9875887680'
     }, 
     {
         id:4,
-        content:' Pending Requests',
-        price:40000,
+        name:'Hema',
+        age:20,
+        location:'Chennai',
+        contact:'7865863780'
     }, 
 ]
 

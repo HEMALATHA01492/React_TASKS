@@ -1,18 +1,38 @@
 import React from 'react';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
-import './App.css';
 import './App1.css';
-import Home from './component/Home';
 
+import { BrowserRouter, Route, Routes ,Link} from 'react-router-dom';
+import Home from './component/Home';
+import Create from './component/Create';
+import Edit from './component/Edit';
+import Read from './component/Read';
 function App(props) {
   const {data}=props
-  console.log(data)
+  const padding = {
+    padding: 10
+  };
   return (
+    <BrowserRouter>
     <div>
-   <Home data={data} />
+        <Link to='/' style={padding}></Link>
+        <Link to='/create' style={padding}></Link>
+        <Link to='/edit/:id' style={padding}></Link>
+        <Link to='/read/:id' style={padding}></Link>
+      </div>
+    <Routes>
+    <Route path='/' element={<Home data={data}/>}></Route>
+    <Route path='/create' element={<Create />}></Route>
+    <Route path='/edit/:id' element={<Edit data={data}/>}></Route>
+    <Route path='/read/:id' element={<Read data={data}/>}></Route>
+
+
+    
      
-    </div>
+   
+    </Routes>
+    </BrowserRouter>
+
   )
 }
 
