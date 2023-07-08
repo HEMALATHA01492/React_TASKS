@@ -1,0 +1,24 @@
+.card {
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1px;
+    border: none;
+
+} 
+.i {
+    cursor: pointer;
+    color: #292f3d;
+    }
+.in-rate {
+    color: hsl(42, 91%, 70%);
+       }
+  
+.in-hover {
+   color:rgb(241, 177, 92);
+      }
+ p{
+    padding: 1px;
+    margin-top: 1px;
+ }

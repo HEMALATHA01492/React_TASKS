@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import NavBar from '../homeComponent/NavBar';
 import Header from '../homeComponent/Header'
 import Footer from '../homeComponent/Footer';
+import Star from '../Star';
 
 
 import '../home.css';
@@ -120,8 +121,7 @@ setCountval7('Add to Cart')}}
                                 {/* <!-- Product name--> */}
                                 <h5 className="fw-bolder">{data[0].content}</h5>
                                  {/* <!-- Product reviews--> */}
-                                
-                                 
+                                     <Star />
                           
                                 {/* <!-- Product price--> */}
                                 <span className="text-muted text-decoration-line-through">₹700 </span>
@@ -150,18 +150,13 @@ setCountval7('Add to Cart')}}
                               <div className="text-center">
                                   {/* <!-- Product name--> */}
                                   <h5 className="fw-bolder">{data[1].content}</h5>
-
-                                  <div className="d-flex justify-content-center small text-warning mb-2">
-                                        <div className="bi-star-fill"></div>
-                                        <div className="bi-star-fill"></div>
-                                        <div className="bi-star-fill"></div>
-                                        <div className="bi-star-fill"></div>
-                                        <div className="bi-star-fill"></div>
-                                    </div>
+                                   {/* <!-- Product reviews--> */}
+                                   <Star />
+                                     
                                   {/* <!-- Product price--> */}
                                   <span className="text-muted text-decoration-line-through">₹590 </span>
                                   ₹{data[1].price}
-                              </div>
+                                  </div>
                           </div>
                           {/* <!-- Product actions--> */}
                           <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -178,7 +173,7 @@ setCountval7('Add to Cart')}}
                       <div className="card h-100">
                           {/* <!-- Sale badge--> */}
                           <div className="badge bg-dark text-white position-absolute"
-                        //    style="top: 0.5rem; right: 0.5rem"
+                           style={{top: '0.5rem' ,right:"0.5rem"}}
                            >Sale</div>
                           {/* <!-- Product image--> */}
                           <img className="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Bauhinia_acuminata_31_08_2012_%281%29.jpg/2560px-Bauhinia_acuminata_31_08_2012_%281%29.jpg" alt="..." />
@@ -187,17 +182,11 @@ setCountval7('Add to Cart')}}
                               <div className="text-center">
                                   {/* <!-- Product name--> */}
                                   <h5 className="fw-bolder">{data[2].content}</h5>
-                                  {/* <!-- Product reviews--> */}
-                                  <div className="d-flex justify-content-center small text-warning mb-2">
-                                      <div className="bi-star-fill"></div>
-                                      <div className="bi-star-fill"></div>
-                                      <div className="bi-star-fill"></div>
-                                      <div className="bi-star-fill"></div>
-                                      <div className="bi-star-fill"></div>
-                                  </div>
+                          {/* <!-- Product reviews--> */}
+                               <Star />
                                   {/* <!-- Product price--> */}
                                   <span className="text-muted text-decoration-line-through">₹600 </span>
-                                  ₹{data[2].price}
+                                  ₹{data[2].price}                        
 
                               </div>
                           </div>
@@ -219,7 +208,7 @@ setCountval7('Add to Cart')}}
                       <div className="card h-100">
                           {/* <!-- Sale badge--> */}
                           <div className="badge bg-dark text-white position-absolute"
-                        //    style={{top:"0.5rem"} ,{ right:"0.5rem"}}
+                           style={{top: '0.5rem' ,right:"0.5rem"}}
                            >Sale</div>
                           {/* <!-- Product image--> */}
                           <img className="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf50CrQG_yspu-WE557M1BxmtSRRersJ2EzQ&usqp=CAU" alt="..." />
@@ -228,8 +217,9 @@ setCountval7('Add to Cart')}}
                               <div className="text-center">
                                   {/* <!-- Product name--> */}
                                   <h5 className="fw-bolder">{data[3].content}</h5>
-                                 
-                                  {/* <!-- Product price--> */}
+                                   {/* <!-- Product reviews--> */}
+                                   <Star />
+                                    {/* <!-- Product price--> */}
                                   <span className="text-muted text-decoration-line-through">₹500 </span>
                                    ₹{data[3].price}
                               </div>
@@ -256,14 +246,9 @@ setCountval7('Add to Cart')}}
                               <div className="text-center">
                                   {/* <!-- Product name--> */}
                                   <h5 className="fw-bolder">{data[4].content}</h5>
-                                  {/* <!-- Product reviews--> */}
-                                  <div className="d-flex justify-content-center" >
-                                      <div className="bi-star-fill"></div>
-                                      <div className="bi-star-fill"></div>
-                                      <div className="bi-star-fill"></div>
-                                      <div className="bi-star-fill"></div>
-                                      <div className="bi-star-fill"></div>
-                                  </div>
+                                   {/* <!-- Product reviews--> */}
+                                   <Star />
+                          
                                   {/* <!-- Product price--> */}
                                   <span className="text-muted text-decoration-line-through">₹500 </span>
                                   ₹{data[4].price}
@@ -282,8 +267,8 @@ setCountval7('Add to Cart')}}
                       <div className="card h-100">
                           {/* <!-- Sale badge--> */}
                           <div className="badge bg-dark text-white position-absolute" 
-                        //   style="top: 0.5rem; right: 0.5rem"
-                          >Sale</div>
+                           style={{top: '0.5rem' ,right:"0.5rem"}}
+                           >Sale</div>
                           {/* <!-- Product image--> */}
                           <img className="card-img-top" src="https://www.shutterstock.com/image-photo/bouquet-white-thrush-flowers-spring-260nw-1102204928.jpg" alt="..." />
                           {/* <!-- Product details--> */}
@@ -291,6 +276,8 @@ setCountval7('Add to Cart')}}
                               <div className="text-center">
                                   {/* <!-- Product name--> */}
                                   <h5 className="fw-bolder">{data[5].content}</h5>
+                                  {/* <!-- Product reviews--> */}
+                                  <Star />
                                   {/* <!-- Product price--> */}
                                   <span className="text-muted text-decoration-line-through">₹500 </span>                                  ₹{data[5].price}
                               </div>
@@ -313,8 +300,10 @@ setCountval7('Add to Cart')}}
                               <div className="text-center">
                                   {/* <!-- Product name--> */}
                                   <h5 className="fw-bolder">{data[6].content}</h5>
+                                  {/* <!-- Product reviews--> */}
+                                  <Star />
                                   {/* <!-- Product price--> */}
-                                  <span className="text-muted text-decoration-line-through">₹500 </span>
+                                  <span className="text-muted text-decoration-line-through">₹700 </span>
                                   ₹{data[6].price}
                               </div>
                           </div>
@@ -331,8 +320,8 @@ setCountval7('Add to Cart')}}
                       <div className="card h-100">
                           {/* <!-- Sale badge--> */}
                           <div className="badge bg-dark text-white position-absolute" 
-                        //   style="top: 0.5rem; right: 0.5rem"
-                          >Sale</div>
+                           style={{top: '0.5rem' ,right:"0.5rem"}}
+                           >Sale</div>
                           {/* <!-- Product image--> */}
                           <img className="card-img-top" src="https://www.shutterstock.com/image-photo/bouquet-white-thrush-flowers-spring-260nw-1102204928.jpg" alt="..." />
                           {/* <!-- Product details--> */}
@@ -341,13 +330,7 @@ setCountval7('Add to Cart')}}
                                   {/* <!-- Product name--> */}
                                   <h5 className="fw-bolder">{data[7].content}</h5>
                                   {/* <!-- Product reviews--> */}
-                                  <div className="d-flex justify-content-center small text-warning mb-2">
-                                      <div className="bi-star-fill"></div>
-                                      <div className="bi-star-fill"></div>
-                                      <div className="bi-star-fill"></div>
-                                      <div className="bi-star-fill"></div>
-                                      <div className="bi-star-fill"></div>
-                                  </div>
+                                  <Star />
                                   {/* <!-- Product price--> */}
                                   <span className="text-muted text-decoration-line-through">₹500 </span>                                  ₹{data[7].price}
                               </div>
@@ -360,9 +343,6 @@ setCountval7('Add to Cart')}}
                           </div>
                       </div>
                   </div>
-
-
-
               </div>
           </div>
       </section> 
