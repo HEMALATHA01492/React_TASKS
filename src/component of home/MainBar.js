@@ -215,11 +215,8 @@ function MainBar(props) {
 
                 </nav>
                 {/* <!-- End of Topbar --> */}
-
-
-
                 <Content />
-                <div class="row ml-3 mr-4">
+                <div className="row ml-3 mr-4">
                 <Card data={data}/>
                 <RemainingItems />
 

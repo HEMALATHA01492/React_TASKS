@@ -67,7 +67,7 @@ function NavBar() {
             </li>
 
             {/* <!-- Divider --> */}
-            <hr class="sidebar-divider"/>
+            <hr className="sidebar-divider"/>
 
             {/* <!-- Heading --> */}
             <div className="sidebar-heading">

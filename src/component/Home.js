@@ -9,9 +9,8 @@ function Home(props) {
 
   return (
     <div id="wrapper">
-    <SideBar />
-    <MainBar data={data}/>
-     
+     <SideBar />
+     <MainBar data={data}/>
     </div>
   )
 }
