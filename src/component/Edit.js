@@ -9,7 +9,7 @@ function Edit() {
     axios.get('http://localhost:3005/users/'+id)
     .then(res => setValue(res.data))
     .catch(err => console.log(err));
-  })
+  },[])
 
   //for update data
   const [value,setValue]=useState({

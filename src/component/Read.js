@@ -9,7 +9,7 @@ function Read() {
     axios.get('http://localhost:3005/users/'+id)
     .then(res => setData(res.data))
     .catch(err => console.log(err));
-  })
+  },[])
 
   return (
     <div>

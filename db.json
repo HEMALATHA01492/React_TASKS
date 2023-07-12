@@ -10,27 +10,27 @@
     {
       "id": 2,
       "name": "Nivin",
-      "age": 20,
+      "age": "26",
       "location": "Chennai",
       "contact": "9008637809"
     },
     {
       "id": 3,
       "name": "Hema",
-      "age": 28,
+      "age": "23",
       "location": "Madurai",
       "contact": "8758637809"
     },
     {
       "id": 4,
       "name": "Rohini",
-      "age": "48",
+      "age": "44",
       "location": "Madurai",
       "contact": "980863709"
     },
     {
       "name": "Varshika",
-      "age": "24",
+      "age": "20",
       "location": "Chennai",
       "contact": "9867977201",
       "id": 5
