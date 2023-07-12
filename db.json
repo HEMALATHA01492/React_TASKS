@@ -1,33 +1,39 @@
-{   
-"users":[
 {
-    "id":1,
-    "name":"Sree Lakshan",
-    "age":28,
-    "location":"Chennai",
-    "contact":"8758637809"
-}, 
-{
-   "id":2,
-   "name":"Nivin",
-   "age":20,
-  "location" :"Chennai",
-   "contact":"9008637809"
-}, 
-{
-   
-   "id":3,
-   "name":"Hema",
-   "age":28,
-  "location" :"Madurai",
-   "contact":"8758637809"
-}, 
-{
-    "id":1,
-    "name":"Rohini",
-    "age":48,
-   "location" :"Madurai",
-    "contact":"980863709"
-}]}
-
-
+  "users": [
+    {
+      "id": 1,
+      "name": "Sree Lakshan ",
+      "age": "25",
+      "location": "Chennai",
+      "contact": "8758637809"
+    },
+    {
+      "id": 2,
+      "name": "Nivin",
+      "age": 20,
+      "location": "Chennai",
+      "contact": "9008637809"
+    },
+    {
+      "id": 3,
+      "name": "Hema",
+      "age": 28,
+      "location": "Madurai",
+      "contact": "8758637809"
+    },
+    {
+      "id": 4,
+      "name": "Rohini",
+      "age": "48",
+      "location": "Madurai",
+      "contact": "980863709"
+    },
+    {
+      "name": "Varshika",
+      "age": "24",
+      "location": "Chennai",
+      "contact": "9867977201",
+      "id": 5
+    }
+  ]
+}

@@ -1,9 +1,24 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-function Home(props) {
-    const {data}=props;
-    console.log(data)
+function Home() {
+    const [data,setData]=useState([])
+    useEffect(()=>{
+        axios.get('http://localhost:3005/users')
+        .then(res =>setData(res.data))
+        .catch(err =>console.log(err));
+    },[])
+    const handleDelete=(id)=>{
+        const confirm=window.confirm("Would you like to Delete?");
+        if(confirm){
+            axios.delete('http://localhost:3005/users/'+id)
+            .then (res =>{
+                window.location.reload();
+            })
+            .catch(err => console.log(err))
+        }
+    }
   return (
     <div className='d-flex flex-column justify-content-center align-iten-center bg-light'>
         <h3>List of Users</h3>
@@ -32,9 +47,9 @@ function Home(props) {
                 <td>{data.location}</td>
                 <td>{data.contact}</td>
                 <td>
-                    <Link to='/read/1' type="button" className="btn btn-primary m-2">Read</Link>
-                    <button type="button" className="btn btn-success m-2">Edit</button>
-                    <button type="button" className="btn btn-danger m-2">Delete</button>
+                    <Link to={`/read/${data.id}`} type="button" className="btn btn-success m-2">Read</Link>
+                    <Link to={`/edit/${data.id}`} type="button" className="btn btn-primary m-2">Edit</Link>
+                    <button type="button" onClick={ e=>handleDelete(data.id)} className="btn btn-danger m-2">Delete</button>
                 </td>
             </tr>
         ) )

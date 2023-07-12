@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -9,9 +10,15 @@ function Create() {
         contact:''
     })
     const Navigate=useNavigate();
+
     const handleSubmit=(event)=>{
         event.preventDefault();
-        Navigate('/')
+        axios.post('http://localhost:3005/users',value)
+        .then(response =>{
+          console.log(response);
+          Navigate('/')
+        })
+       .catch(err => console.log(err));
     }
   return (
     <div className='d-flex w-100 vh-100 justify-content-center align-items-center bg-light'>
