@@ -26,28 +26,28 @@ function Create() {
           <h3>Create a User</h3>
           <form onSubmit={handleSubmit}>
               <div className="mb-3 row">
-                     <label for="input" className="col-sm-2 col-form-label">Name</label>
+                     <label htmlFor="input" className="col-sm-2 col-form-label">Name</label>
                   <div className="col-sm-10">
                      <input type="text" className="form-control" placeholder='Enter your name here'
                      onChange={e=>setValue({...value,name:e.target.value})} />
                   </div>
                 </div>
               <div class="mb-3 row">
-                     <label for="input" className="col-sm-2 col-form-label">Age</label>
+                     <label htmlFor="input" className="col-sm-2 col-form-label">Age</label>
                   <div class="col-sm-10">
                      <input type="text" className="form-control" placeholder='Enter your age here' 
                       onChange={e=>setValue({...value,age:e.target.value})}/>
                    </div>
                </div>
                <div class="mb-3 row">
-                     <label for="input" className="col-sm-2 col-form-label">Location</label>
+                     <label htmlFor="input" className="col-sm-2 col-form-label">Location</label>
                   <div class="col-sm-10">
                      <input type="text" className="form-control" placeholder='Enter your location here' 
                       onChange={e=>setValue({...value,location:e.target.value})}/>
                    </div>
                </div>
                <div class="mb-3 row">
-                     <label for="input" className="col-sm-2 col-form-label">Contact</label>
+                     <label htmlFor="input" className="col-sm-2 col-form-label">Contact</label>
                   <div class="col-sm-10">
                      <input type="text" className="form-control" placeholder='Enter your contact number here' 
                      onChange={e=>setValue({...value,contact:e.target.value})}/>

@@ -6,7 +6,7 @@ function Edit() {
 //fetching data
   const {id}=useParams();
   useEffect(()=>{
-    axios.get('http://localhost:3005/users/'+id)
+    axios.get(`http://localhost:3005/users/${id}`)
     .then(res => setValue(res.data))
     .catch(err => console.log(err));
   },[])
@@ -22,7 +22,7 @@ const Navigate=useNavigate();
 
 const handleUpdate=(event)=>{
     event.preventDefault();
-    axios.put('http://localhost:3005/users/'+id,value)
+    axios.put(`http://localhost:3005/users/${id}`,value)
     .then(response =>{
       console.log(response);
       Navigate('/')
@@ -38,7 +38,7 @@ const handleUpdate=(event)=>{
           <h3>Edit User</h3>
           <form onSubmit={handleUpdate}>
               <div className="mb-3 row">
-                     <label for="input" className="col-sm-2 col-form-label">Name</label>
+                     <label htmlFor="input" className="col-sm-2 col-form-label">Name</label>
                   <div className="col-sm-10">
                      <input type="text" className="form-control" placeholder='Enter your name here'
                       value={value.name} 
@@ -46,27 +46,27 @@ const handleUpdate=(event)=>{
                      />
                   </div>
                 </div>
-              <div class="mb-3 row">
-                     <label for="input" className="col-sm-2 col-form-label">Age</label>
-                  <div class="col-sm-10">
+              <div className="mb-3 row">
+                     <label htmlFor="input" className="col-sm-2 col-form-label">Age</label>
+                  <div className="col-sm-10">
                      <input type="text" className="form-control" placeholder='Enter your age here'
                      value={value.age} 
                       onChange={e=>setValue({...value,age:e.target.value})}
                       />
                    </div>
                </div>
-               <div class="mb-3 row">
-                     <label for="input" className="col-sm-2 col-form-label">Location</label>
-                  <div class="col-sm-10">
+               <div className="mb-3 row">
+                     <label htmlFor="input" className="col-sm-2 col-form-label">Location</label>
+                  <div className="col-sm-10">
                      <input type="text" className="form-control" placeholder='Enter your location here' 
                       value={value.location} 
                       onChange={e=>setValue({...value,location:e.target.value})}
                       />
                    </div>
                </div>
-               <div class="mb-3 row">
-                     <label for="input" className="col-sm-2 col-form-label">Contact</label>
-                  <div class="col-sm-10">
+               <div className="mb-3 row">
+                     <label htmlFor="input" className="col-sm-2 col-form-label">Contact</label>
+                  <div className="col-sm-10">
                      <input type="text" className="form-control" placeholder='Enter your contact number here' 
                        value={value.contact} 
                        onChange={e=>setValue({...value,contact:e.target.value})}
