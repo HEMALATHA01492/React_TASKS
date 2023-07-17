@@ -5,7 +5,8 @@ import { useParams,Link, useNavigate } from 'react-router-dom';
 function Edit() {
 //fetching data
   const {id}=useParams();
-  useEffect(()=>{
+  useEffect(async()=>{
+    await
     axios.get(`http://localhost:3005/users/${id}`)
     .then(res => setValue(res.data))
     .catch(err => console.log(err));

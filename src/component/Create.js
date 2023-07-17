@@ -11,8 +11,9 @@ function Create() {
     })
     const Navigate=useNavigate();
 
-    const handleSubmit=(event)=>{
+    const handleSubmit=async(event)=>{
         event.preventDefault();
+        await
         axios.post('http://localhost:3005/users',value)
         .then(response =>{
           console.log(response);
