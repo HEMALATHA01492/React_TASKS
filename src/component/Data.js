@@ -1,0 +1,31 @@
+const data=[
+    {
+        id:1,
+        Name:"varun",
+        Age:"20",
+        Location:"chennai",
+        Contact:"9876567890"
+    },
+    {
+        id:2,
+        Name:"nila",
+        Age:"28",
+        Location:"chennai",
+        Contact:"9876534890"
+    },
+    {
+        id:3,
+        Name:"nivin",
+        Age:"10",
+        Location:"chennai",
+        Contact:"9872567890"
+    },
+    {
+        id:4,
+        Name:"karthick",
+        Age:"30",
+        Location:"chennai",
+        Contact:"987067890"
+    }
+]
+export default data;

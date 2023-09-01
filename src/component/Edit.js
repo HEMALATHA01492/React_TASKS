@@ -1,35 +1,34 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useParams,Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import Data from '../component/Data';
 
 function Edit() {
-//fetching data
-  const {id}=useParams();
-  useEffect(()=>{
-    axios.get(`http://localhost:3005/users/${id}`)
-    .then(res => setValue(res.data))
-    .catch(err => console.log(err));
-  },[])
 
-  //for update data
-  const [value,setValue]=useState({
-    name:'',
-    age:'',
-    location:'',
-    contact:''
-})
-const Navigate=useNavigate();
 
-const handleUpdate=(event)=>{
+  const [name,setName]=useState('');
+  const [age,setAge]=useState('');
+  const [location,setLocation]=useState('');
+  const [contact,setContact]=useState('');
+
+  const Navigate=useNavigate();
+
+  const id= useParams().id;
+  const out=Data.find(n => n.id === Number(id))
+
+  const handleUpdate=(event)=>{
     event.preventDefault();
-    axios.put(`http://localhost:3005/users/${id}`,value)
-    .then(response =>{
-      console.log(response);
-      Navigate('/')
-    })
-   .catch(err => console.log(err));}
- 
-
+    out.Name=name;
+    out.Age=age;
+    out.Location=location;
+    out.Contact=contact;
+    Navigate('/')
+  } 
+  useEffect(()=>{
+    setName(out.Name)
+    setAge(out.Age);
+    setLocation(out.Location);
+    setContact(out.Contact);
+  },[])
 
   return (
     <div>
@@ -41,36 +40,34 @@ const handleUpdate=(event)=>{
                      <label htmlFor="input" className="col-sm-2 col-form-label">Name</label>
                   <div className="col-sm-10">
                      <input type="text" className="form-control" placeholder='Enter your name here'
-                      value={value.name} 
-                      onChange={e=>setValue({...value,name:e.target.value})} 
-                     />
+                      value={name} 
+                      onChange={(e)=>setName(e.target.value)} />
                   </div>
                 </div>
               <div className="mb-3 row">
                      <label htmlFor="input" className="col-sm-2 col-form-label">Age</label>
                   <div className="col-sm-10">
                      <input type="text" className="form-control" placeholder='Enter your age here'
-                     value={value.age} 
-                      onChange={e=>setValue({...value,age:e.target.value})}
-                      />
+                     value={age} 
+                     onChange={(e)=>setAge(e.target.value)}/>
                    </div>
                </div>
                <div className="mb-3 row">
                      <label htmlFor="input" className="col-sm-2 col-form-label">Location</label>
                   <div className="col-sm-10">
                      <input type="text" className="form-control" placeholder='Enter your location here' 
-                      value={value.location} 
-                      onChange={e=>setValue({...value,location:e.target.value})}
-                      />
+                      value={location} 
+                      onChange={(e)=>setLocation(e.target.value)}/>
+
                    </div>
                </div>
                <div className="mb-3 row">
                      <label htmlFor="input" className="col-sm-2 col-form-label">Contact</label>
                   <div className="col-sm-10">
                      <input type="text" className="form-control" placeholder='Enter your contact number here' 
-                       value={value.contact} 
-                       onChange={e=>setValue({...value,contact:e.target.value})}
-                     />
+                       value={contact} 
+                       onChange={(e)=>setContact(e.target.value)}/>
+
                    </div>
                </div>
                <button type="button" className="btn btn-success m-2" onClick={handleUpdate}>Update</button>

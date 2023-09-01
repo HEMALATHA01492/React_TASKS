@@ -1,22 +1,29 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import Data from '../component/Data';
+
 
 function Home() {
-    const [data,setData]=useState([])
-    useEffect(()=>{
-        axios.get('http://localhost:3005/users')
-        .then(res =>setData(res.data))
-        .catch(err =>console.log(err));
-    },[])
+    const Navigate=useNavigate();
+
+    const handleEdit=(id,name,age,location,contact)=>{
+        localStorage.setItem('Name',name);
+        localStorage.setItem('Age',age);
+        localStorage.setItem('Location',location);
+        localStorage.setItem('Contact',contact);
+        localStorage.setItem('id',id);
+
+    }
     const handleDelete=(id)=>{
         const confirm=window.confirm("Would you like to Delete?");
         if(confirm){
-            axios.delete('http://localhost:3005/users/'+id)
-            .then (res =>{
-                window.location.reload();
-            })
-            .catch(err => console.log(err))
+            let index=Data.map((e)=>{
+                return e.id
+            }).indexOf(id);
+            Data.splice(index,1)
+            Navigate('/')
+        }else{
+            Navigate('/')
         }
     }
   return (
@@ -39,20 +46,26 @@ function Home() {
         </thead>
         <tbody>
      {
-        data.map(data=>(
+        Data && Data.length > 0 ?
+        Data.map(data=>(
             <tr key={data.id}>
                 <td>{data.id}</td>
-                <td>{data.name}</td>
-                <td>{data.age}</td>
-                <td>{data.location}</td>
-                <td>{data.contact}</td>
+                <td>{data.Name}</td>
+                <td>{data.Age}</td>
+                <td>{data.Location}</td>
+                <td>{data.Contact}</td>
                 <td>
-                    <Link to={`/read/${data.id}`} type="button" className="btn btn-success m-2">Read</Link>
-                    <Link to={`/edit/${data.id}`} type="button" className="btn btn-primary m-2">Edit</Link>
+                    <Link to={`/read/${data.id}`} element={handleEdit}>
+                        <button className="btn btn-success m-2" onClick={()=>handleEdit(data.id,data.Nameame,data.Age,data.Location,data.Contact)}>Read</button>
+                    </Link>
+                    <Link to={`/edit/${data.id}`} element={handleEdit}b>
+                        <button className="btn btn-primary m-2" onClick={()=>handleEdit(data.id,data.Name,data.Age,data.Location,data.Contact)}>Edit</button>
+                    </Link>
                     <button type="button" onClick={ e=>handleDelete(data.id)} className="btn btn-danger m-2">Delete</button>
                 </td>
             </tr>
         ) )
+        : "NO DATA AVAILABLE"
         }
         </tbody>
      </table>
